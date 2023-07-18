@@ -7,7 +7,8 @@ const pResult = document.querySelector('#result');
 
 form.addEventListener('click', sumarInput);
 
-function sumarInput(){
+function sumarInput(event){
+  event.preventDefault();
  const suma = Number(input1.value) + Number(input2.value);
  pResult.innerText = "Resultado : "+ suma;
 }
